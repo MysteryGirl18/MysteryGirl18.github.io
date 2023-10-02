@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    column-count: 3;
+    column-count: 2;
     /* column-width: 250px;
     column-gap: 20px; */
 }
@@ -70,14 +70,14 @@ img:nth-of-type(1) {
     margin-right: auto;
     width: 50%;
 }  
-  
 
-/* button{
+button{
+    color: white;
     padding: 40px;
     border: none;
     border-radius: 10px;
 }
 
 button:hover {
-    background-color: green;
-} */
+    background-color: rgb(49, 16, 93);
+}
