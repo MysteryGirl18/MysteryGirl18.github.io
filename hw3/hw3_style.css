@@ -73,6 +73,7 @@ img:nth-of-type(1) {
 
 button{
     color: white;
+    background-color: rgb(35, 13, 63);
     padding: 40px;
     border: none;
     border-radius: 10px;
