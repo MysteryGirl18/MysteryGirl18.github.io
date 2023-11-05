@@ -1,18 +1,18 @@
 body {
-    background-color: rgb(200, 119, 133);
+    background-color: rgb(192, 75, 95);
 
 }
 
 .container {
-    column-count: 2;
+    column-count: 1;
     /* column-width: 250px;
     column-gap: 20px; */
 }
 
 .card {
     break-inside: avoid;
-    background-color: rgb(195, 215, 216);
-    border: 2px solid rgb(150, 34, 34);
+    background-color: rgb(176, 31, 166);
+    border: 2px solid rgb(211, 59, 59);
     padding: 10px;
     margin: 0 0 1em 0;
 }
@@ -38,10 +38,10 @@ body {
     gap: 10px;
     flex: 1 0 0;
     align-self: stretch;
-    background: rgb(236, 22, 90);
+    background: #ea729e;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     color: rgba(240, 221, 221, 0.9);
-    text-decoration-color: rgb(10, 10, 10);
+    text-decoration-color: rgb(11, 11, 11);
 }
 
 .centerbttn{
@@ -57,14 +57,15 @@ a{
 
 
 main:nth-of-type(1) {
-    margin-top: 6.8vw;
-    color:rgb(22, 8, 91);
+    margin-top: 9.8vw;
+    color:rgb(228, 193, 247);
     font-family: sans-serif;
 }  
 
 h2:nth-of-type(1) {
     text-align: center;
     font-style: italic;
+    background-color: rgb(243, 243, 244);
     /* font-family: sans-serif; */
 }  
 
