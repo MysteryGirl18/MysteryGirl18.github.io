@@ -44,10 +44,6 @@ body {
     text-decoration-color: rgb(11, 11, 11);
 }
 
-.centerbttn{
-    text-align: center;
-}
-
 a{
     font-family: Georgia, courier, courier new, sans-serif;
     color: rgba(20, 49, 129, 0.9);
@@ -78,7 +74,8 @@ img:nth-of-type(1) {
 
 button{
     color: white;
-    background-color: rgb(35, 13, 63);
+    background-color: rgb(55, 102, 168);
+    /* background-image: url(pics/blue_particle.jpg) no-repeat; */
     padding: 40px;
     border: none;
     border-radius: 10px;
