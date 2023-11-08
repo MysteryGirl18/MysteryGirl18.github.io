@@ -1,0 +1,95 @@
+/* body {
+    background-color: green;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+button {
+    border-radius: 100%;
+    padding: 3vw;
+    border: none;
+
+}
+
+button:hover{
+    background-color: pink;
+}
+
+input {
+    background-color: pink;
+    
+}
+
+input:hover {
+    background-color: yellow;
+}
+
+p {
+    background-color: gray;
+    width: 100px;
+    padding: 3vw;
+    border-radius: 100%;
+    margin: 30px;
+}
+
+p:hover {
+    background-color: black;
+    color:white;
+} */
+
+
+body {
+    background-color: hotpink;
+    font-family: "Arial", "Helvetica", "sans-serif";
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+
+main {
+    background-color: white;
+}
+
+button {
+    background-color: color-mix(in srgb, yellow 30%, blue 50%);
+    border-radius: 10px 100px / 120px;         /* round the button corners */
+    padding: 3vw;                /* padding b/w button edges and internal text _________ units: 1 vw = 1% of viewport */
+    border: 2px solid #E8E8E8;
+}
+
+button:hover {
+    background-color: aqua;
+    border-color: black;
+    box-shadow: 10px 5px 5px red;
+}
+
+input {
+    background-color: lightpink;
+}
+
+input:hover {
+    border: 2px dotted yellow;
+}
+
+p {
+    background-color: rgb(23, 115, 168);
+    width: 120px;               /* this width instead of container width? */
+    padding: 3vw;
+    border-radius: 100%;        /* round the element (into an oval?) */
+    margin: 30px;               /* add space/padding outside of border */
+}
+
+p:hover {
+    background-color: red;
+    color:black;
+}
+
+li {
+    background-color: orange;
+    width: 120px;               /* this width instead of container width? */
+    padding: 3vw;
+    border-radius: 100%;        /* round the element (into an oval?) */
+    margin: 30px;               /* add space/padding outside of border */
+}
+
+li:hover {
+    background-color: black;
+    color:white;
+}
