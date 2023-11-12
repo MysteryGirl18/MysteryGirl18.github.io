@@ -1,28 +1,50 @@
-console.log("the Message!");
+console.log("theMessage");
 
-let theButton = document.getElementById("btn");
-let theMain = document.querySelector("main")
-theButton.addEventListener('click',foo);
+const imgBtn = document.getElementById("img-btn")
+const quoteBtn = document.getElementById("quote-btn");
+const surpriseBtn = document.getElementById("surp-btn");
 
-const canvas = document.querySelector("urCanvas");
-const ctx = canvas.getContext("2d");
+const theDivider = document.getElementById("display");
 
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 150, 100);
-ctx.font = "30px Arial";
-ctx.fillText("hiiiiiiiii", 10, 50);
+let para;
+let node;
 
-function foo(){
-    console.log("you clicked!");
-    let p = document.getElementById('post').value
-    theMain.style.backgroundColor = "blue";
-    theButton.textContent = p
+const img = "pics/soldiers.png";
+const quote = "'History as she is harped. Rite words in rote order.'  -Marshall McLuhan";
+const surprise = "pics/sloth.gif";
 
-  
-    ctx.font = "30px Arial";
-    ctx.strokeText(p, 10, 50);
+imgBtn.addEventListener('click', displayImg);
+quoteBtn.addEventListener('click', displayQuote);
+surpriseBtn.addEventListener('click', displaySurprise);
+
+function displayQuote() {
+    console.log("click!");
+
+    let para = document.createElement('p')
+    para.className = "quote";
+    let node = document.createTextNode(quote);
+    para.appendChild(node);
+
+    // document.body.appendChild(theItem);
+    theDivider.replaceChildren(para);
 }
 
+function displayImg() {
+    console.log("click!");
 
-// var c = document.getElementById("urCanvas");
-// var ctx = c.getContext("2d");
+    const myImage = new Image();
+    myImage.src = img;
+    myImage.class = "full_width";
+
+    theDivider.replaceChildren(myImage);
+}
+
+function displaySurprise() {
+    console.log("click!");
+
+    const myImage = new Image();
+    myImage.src = surprise;
+    myImage.class = "full_width";
+
+    theDivider.replaceChildren(myImage);
+}

@@ -97,11 +97,11 @@ button:hover {
 }
 
 #display {
-    background-image: url(pics/blue_particle.jpg);
+    background-image: url(pics/blue_particle.jpg) no-repeat; 
     /* background-color: aquamarine; */
 }
 
-#full_width{
+.full_width{
     width: 100%;
 }
 
@@ -115,4 +115,16 @@ button:hover {
     gap: 10px;
     flex: 1 0 0;
     align-self: auto;
+}
+
+.quote {
+  background: #e6c8c8;
+  border-left: 10px solid rgb(150, 41, 41);
+  text-align: center;
+  font-weight: bold;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  color: rgb(68, 33, 196);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
