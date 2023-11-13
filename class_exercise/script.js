@@ -47,17 +47,17 @@ function makeList() {
 
     theItem = document.createElement("li");
     theTxt = document.createTextNode(theUserWords);
-    theItem.appendChild(theTxt)
+    theItem.appendChild(theTxt);
 
     container.appendChild(theItem);     // could also have appended directly to DOM using document.body.appendChild()
 }
 
 addButton.addEventListener('click', makeList)
 
-function eraseListItem(){
-    console.log("commencing erase!");
-    document.querySelector("div").remove(theItem);
-}
+// function eraseList(event){
+//     console.log("commencing erase!");
+//     container.removeChild(theItem);
+// }
 
-document.querySelector("p").addEventListener("click", eraseList);
+// document.getElementById("clear").addEventListener("click", eraseList);
 
