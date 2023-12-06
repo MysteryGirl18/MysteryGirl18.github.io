@@ -14,9 +14,9 @@ ctx.fillText("hiiiiiiiii", 10, 50);
 
 function foo(){
     console.log("you clicked!");
-    let p = document.getElementById('post').value
+    let p = document.getElementById('post').valque
     theMain.style.backgroundColor = "blue";
-    theButton.textContent = p
+    theButton.textContent = p;
 
   
     ctx.font = "30px Arial";
