@@ -30,14 +30,14 @@ function nextQuestion(option) {
         // alert("You have chosen: left");
 
         document.body.style.backgroundImage = "url('pics/pretty_tall_tree_path.jpg')";
-        document.body.style.backgroundSize = "600px";
+        document.body.style.backgroundSize = "50% 100%";
         // You can add more logic or update the game state as needed
     } else if (option === 2) {
         // For simplicity, let's assume option 2 is an incorrect choice
         // alert("You have chosen: right");
 
         document.body.style.backgroundImage = "url('pics/mysterious_path.jpg')";
-        document.body.style.backgroundSize = "700px";
+        document.body.style.backgroundSize = "50% 100%";
         // You can add more logic or update the game state as needed
     }
 
