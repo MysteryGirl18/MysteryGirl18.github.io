@@ -1,0 +1,49 @@
+/* original game.html css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #dbb7c6;
+    background-image: url(pics/forest_fork.jpg);
+    background-size: 100% auto;
+    text-align: center;
+}
+
+#question-container {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.answer-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+} 
+
+.question {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 2px solid pink;
+    cursor: pointer;
+} 
+
+button:hover {
+    background-color: #45a049;
+} 

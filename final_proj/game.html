@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Game</title>
+</head>
+<body>
+
+<div id="question-container">
+    <h1 id="question">Choose a path:</h1>
+    <button class="answer-button" onclick="nextQuestion('left')">Left Path</button>
+    <button class="answer-button" onclick="nextQuestion('right')">Right Path</button>
+</div>
+
+<script>
+    console.log("Code is running");
+    const questions = [
+        {
+            text: 'You arrive at a crossroads. Which path will you choose?',
+            answers: [
+                { text: 'Take the left path', destination: 'left1' },
+                { text: 'Take the right path', destination: 'right1' }
+            ]
+        },
+        {
+            text: 'You encounter a dragon! What will you do?',
+            answers: [
+                { text: 'Fight the dragon', destination: 'fight' },
+                { text: 'Run away', destination: 'run' }
+            ]
+        },
+        // Add more questions and paths as needed
+        {
+            text: 'let us go .....',
+            answers: [
+                { text: 'Fight', destination: 'fight' },
+                { text: 'Flight', destination: 'run' }
+            ]
+        },
+    ];
+
+    let currentQuestionIndex = 0;
+
+    function showQuestion(index) {
+        console.log("showing next question...");
+        const questionContainer = document.getElementById('question-container');
+        const question = questions[index];
+
+        questionContainer.innerHTML = `
+            <h1 id="question">${question.text}</h1>
+            ${question.answers.map(answer =>
+                `<button class="answer-button" onclick="nextQuestion('${answer.destination}')">
+                    ${answer.text}
+                </button>`
+            ).join('')}
+        `;
+    }
+
+    function nextQuestion(destination) {
+        console.log("Button clicked, answer chosen!");
+        const nextQuestionIndex = questions.findIndex(question => question.answers.some(answer => answer.destination === destination));
+
+        if (nextQuestionIndex !== -1) {
+            currentQuestionIndex = nextQuestionIndex;
+            showQuestion(currentQuestionIndex);
+        } else {
+            alert('Game Over!'); // You can customize this part based on your game logic
+        }
+    }
+
+    // Initial question
+    showQuestion(currentQuestionIndex);
+</script>
+
+</body>
+</html>
