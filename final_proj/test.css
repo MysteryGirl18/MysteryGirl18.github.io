@@ -8,7 +8,7 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #dbb7c6;
-    background-image: url(pics/forest_fork.jpg);
+    background-image: url(pics/mysterious_path.jpg);
     background-size: 100% auto;
     text-align: center;
 }
@@ -30,6 +30,8 @@ body {
 .question {
     font-size: 1.5em;
     margin-bottom: 20px;
+    background-color: black;
+    color: white;
 }
 
 .btn-container {
@@ -40,10 +42,19 @@ body {
 .btn {
     padding: 10px 20px;
     font-size: 1em;
-    border: 2px solid pink;
+    border: 2px solid black;
     cursor: pointer;
 } 
 
 button:hover {
     background-color: #45a049;
 } 
+
+#player {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 70px;
+    /* transform: translate(-50%, 50%);
+    animation: moveZigzag 3s ease-in-out; */
+}

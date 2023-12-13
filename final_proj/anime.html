@@ -1,0 +1,205 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: url('pics/forest_fork.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        #stick-figure {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: transform 2s ease-in-out;
+        }
+
+        #left-path-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="left-path-btn" onclick="walkLeft()">Take the Left Path</button>
+    <img id="stick-figure" src="pics/pretty_tall_tree_path.jpg" alt="Stick Figure" width="80px">
+
+    <script>
+        function walkLeft() {
+            var stickFigure = document.getElementById('stick-figure');
+            stickFigure.style.transform = 'translateX(-100%)';
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>        (left then up)
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        #gliding-image {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transition: all 1s ease-in-out;
+        }
+
+        #glide-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="glide-btn" onclick="glideImage()">Glide</button>
+    <img id="gliding-image" src="pics/spin_girl.gif" alt="Gliding Image" width="50px">
+
+    <script>
+        function glideImage() {
+            var glidingImage = document.getElementById('gliding-image');
+
+            // Glide left for 1 second
+            glidingImage.style.left = '50%';
+            setTimeout(function () {
+                glidingImage.style.left = '30%';
+            }, 1000);
+
+            // Glide up for 1 second after a delay of 1 second
+            setTimeout(function () {
+                glidingImage.style.bottom = '80%';
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!-- (diamond zigzag + up left) -->
+<!DOCTYPE html>            
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            background-image: url(pics/walkway.jpg);
+            background-size: 100% auto;
+            background-color: rgb(132, 203, 25);
+            animation: 3s linear 1s infinite alternate moveIt;
+        }
+
+        #zigzag-image {
+            position: absolute;
+            bottom: 70%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            animation: moveZigzag 4s ease-in-out;
+            animation-delay: 2s;
+            border: 5px solid #f0f0f0;;
+            width: 80px;
+        }
+
+        h1 {
+            background-color: whitesmoke;
+        }
+
+        /* #move-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        } */
+
+        @keyframes moveZigzag {
+            0%, 80% {
+                bottom: 70%;
+                left: 50%;
+            }
+            20% {
+                bottom: 35%;
+                left: 75%;
+            }
+            40% {
+                bottom: 0%;
+                left: 50%;
+            }
+            60% {
+                bottom: 35%;
+                left: 25%;
+            }
+            100% {
+                bottom: 0%;
+                left: 50%;
+                /* 80 then 25 */
+            }
+        }
+
+        @keyframes moveIt {
+            from {background-position: bottom left;}
+            to {background-position: top right;}
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button id="move-btn" onclick="moveImage()">Move</button> -->
+    <img id="zigzag-image" src="pics/spin_girl.gif" alt="Zigzag Image">
+    <h1>Welcome to the End of Your Path! Now what lies ahead?</h1>
+
+    <!-- <script>
+        function moveImage() {
+            var zigzagImage = document.getElementById('zigzag-image');
+            zigzagImage.style.animation = 'none'; // Reset animation
+            setTimeout(function () {
+                zigzagImage.style.animation = 'moveZigzag 3s ease-in-out'; // Apply animation after a short delay
+            }, 10);
+        }
+    </script> -->
+</body>
+
+</html>
