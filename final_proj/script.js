@@ -166,7 +166,8 @@ function nextQuestion(option) {
     } else {
         // Display game over or completion message
         // document.getElementById("question-container").innerHTML = "<h2>Game Over!</h2>";
-        window.location.href = '/anime.html'
+        // window.location.href = '/anime.html'
+        window.location.pathname = '/anime.html'
         // document.location.href = newUrl;
     }
 }
