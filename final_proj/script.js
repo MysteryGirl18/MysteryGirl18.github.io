@@ -362,21 +362,27 @@ function nextQuestion(option) {
             }
         } else {
             // Debugging logs
-            console.log("learnMoreLink:", learnMoreLink);
-            console.log("Mapping URL:", answerToQuestion.mapping[1]);
-
-            // go to end of path animation page
             window.location.href = 'anime.html';
-            // Reload the entire page
-            location.reload();
+
+            // console.log("is Question?:", answerToQuestion.mapping[0]);
+            // console.log("Mapping URL:", answerToQuestion.mapping[1]);
 
             const learnMoreLink = document.getElementById("outside-link");
-            learnMoreLink.href = answerToQuestion.mapping[1];
-        }
-    }
+            if (learnMoreLink) {
+              console.log("learnMoreLink:", learnMoreLink);
 
-    // Move to the next question if answer mapping not found
-    currentQuestion++;
+              learnMoreLink.href = answerToQuestion.mapping[1];
+            }
+
+            // go to end of path animation page
+            // window.location.href = 'anime.html';
+            // Reload the entire page
+            // location.reload();
+        }
+    } else {
+        // Move to the next question if answer mapping not found
+        currentQuestion++;
+    }
 }
 
 // Initial display
