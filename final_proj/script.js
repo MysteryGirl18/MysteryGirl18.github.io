@@ -369,7 +369,7 @@ function nextQuestion(option) {
         // document.getElementById("question-container").innerHTML = "<h2>Game Over!</h2>";
         // window.location.href = '/anime.html'
         // window.location.pathname = '/anime.html'
-        window.location.href = '/anime.html';
+        window.location.href = 'anime.html';
         // document.location.href = newUrl;
     }
 }
