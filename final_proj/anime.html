@@ -1,114 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background: url('pics/forest_fork.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        #stick-figure {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: transform 2s ease-in-out;
-        }
-
-        #left-path-btn {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
-    <button id="left-path-btn" onclick="walkLeft()">Take the Left Path</button>
-    <img id="stick-figure" src="pics/pretty_tall_tree_path.jpg" alt="Stick Figure" width="80px">
-
-    <script>
-        function walkLeft() {
-            var stickFigure = document.getElementById('stick-figure');
-            stickFigure.style.transform = 'translateX(-100%)';
-        }
-    </script>
-</body>
-
-</html> -->
-
-<!-- <!DOCTYPE html>        (left then up)
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: #f0f0f0;
-        }
-
-        #gliding-image {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transition: all 1s ease-in-out;
-        }
-
-        #glide-btn {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
-    <button id="glide-btn" onclick="glideImage()">Glide</button>
-    <img id="gliding-image" src="pics/spin_girl.gif" alt="Gliding Image" width="50px">
-
-    <script>
-        function glideImage() {
-            var glidingImage = document.getElementById('gliding-image');
-
-            // Glide left for 1 second
-            glidingImage.style.left = '50%';
-            setTimeout(function () {
-                glidingImage.style.left = '30%';
-            }, 1000);
-
-            // Glide up for 1 second after a delay of 1 second
-            setTimeout(function () {
-                glidingImage.style.bottom = '80%';
-            }, 2000);
-        }
-    </script>
-</body>
-
-</html> -->
-
-<!-- (diamond zigzag + up left) -->
 <!DOCTYPE html>            
 <html lang="en">
 
@@ -147,24 +36,11 @@
             color: rgb(224, 38, 38);
         }
 
-        /* #move-btn {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        } */
-
         .white-box {
             position: absolute;
             bottom: 0;
-            left: 10%; /* Center the box by setting left to 25% */
-            width: 80%; /* Set the width to 50% of the page */
+            left: 10%; /* Center the box by setting left to 10% */
+            width: 80%; /* Set the width to 80% of the page */
             height: 40%;
             background-color: white;
             border: 5px solid black;
@@ -218,7 +94,6 @@
 </head>
 
 <body>
-    <!-- <button id="move-btn" onclick="moveImage()">Move</button> -->
     <img id="zigzag-image" src="pics/spin_girl.gif" alt="Zigzag Image">
     <h1>Welcome to the End of Your Path! Now what lies ahead?</h1>
 
@@ -237,18 +112,7 @@
         <p>Or, replay the game to find another topic to 
             learn about!
         </p>
-        
     </div>
-
-    <!-- <script>
-        function moveImage() {
-            var zigzagImage = document.getElementById('zigzag-image');
-            zigzagImage.style.animation = 'none'; // Reset animation
-            setTimeout(function () {
-                zigzagImage.style.animation = 'moveZigzag 3s ease-in-out'; // Apply animation after a short delay
-            }, 10);
-        }
-    </script> -->
 </body>
 
 </html>
