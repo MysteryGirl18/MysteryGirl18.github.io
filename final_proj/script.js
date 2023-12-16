@@ -330,6 +330,13 @@ function displayQuestion() {
     const btnOption1 = document.getElementById("btnOption1");
     const btnOption2 = document.getElementById("btnOption2");
 
+    // Check if elements are found, if not then we've switched over to anime.html
+    if (!questionElement || !btnOption1 || !btnOption2) {
+        console.error("One or more elements not found!");
+        changeLink();
+        return;
+    }
+
     questionElement.textContent = questions[currentQuestion].question;
     btnOption1.textContent = questions[currentQuestion].options[0];
     btnOption2.textContent = questions[currentQuestion].options[1];
@@ -362,28 +369,28 @@ function nextQuestion(option) {
             }
         } else {
             // Debugging logs
-            window.location.href = 'anime.html';
-
             // console.log("is Question?:", answerToQuestion.mapping[0]);
             // console.log("Mapping URL:", answerToQuestion.mapping[1]);
 
-            const learnMoreLink = document.getElementById("outside-link");
-            if (learnMoreLink) {
-              console.log("learnMoreLink:", learnMoreLink);
-
-              learnMoreLink.href = answerToQuestion.mapping[1];
-            }
-
-            // go to end of path animation page
-            // window.location.href = 'anime.html';
-            // Reload the entire page
-            // location.reload();
+            const externalLink = answerToQuestion.mapping[1]
+            window.location.href = 'anime.html?link=' + externalLink;
         }
-    } else {
-        // Move to the next question if answer mapping not found
-        currentQuestion++;
     }
 }
+
+function changeLink() {
+    // get the URL parameters passed into anime.html
+    const urlParams = new URLSearchParams(window.location.search);
+    const newLink = urlParams.get('link');
+    // console.log("passed in URL:", newLink);
+
+    const learnMoreLink = document.getElementById("outside-link");
+
+    // console.log("learnMoreLink:", learnMoreLink.href);
+    learnMoreLink.href = newLink;
+    // console.log("learnMoreLink:", learnMoreLink.href);
+}
+
 
 // Initial display
 displayQuestion();
