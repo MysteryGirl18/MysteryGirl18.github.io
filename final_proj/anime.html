@@ -134,12 +134,17 @@
             transform: translate(-50%, 50%);
             animation: moveZigzag 4s ease-in-out;
             animation-delay: 2s;
-            border: 5px solid #f0f0f0;;
+            border: 5px solid #f0f0f0;
             width: 80px;
+            z-index: 1;
         }
 
         h1 {
             background-color: whitesmoke;
+        }
+
+        h3 {
+            color: rgb(224, 38, 38);
         }
 
         /* #move-btn {
@@ -154,6 +159,32 @@
             border-radius: 5px;
             cursor: pointer;
         } */
+
+        .white-box {
+            position: absolute;
+            bottom: 0;
+            left: 10%; /* Center the box by setting left to 25% */
+            width: 80%; /* Set the width to 50% of the page */
+            height: 40%;
+            background-color: white;
+            border: 5px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
 
         @keyframes moveZigzag {
             0%, 80% {
@@ -190,6 +221,24 @@
     <!-- <button id="move-btn" onclick="moveImage()">Move</button> -->
     <img id="zigzag-image" src="pics/spin_girl.gif" alt="Zigzag Image">
     <h1>Welcome to the End of Your Path! Now what lies ahead?</h1>
+
+
+    <div class="white-box">
+        <p>Way to answer all those questions! Now it is time 
+            to embark on a path with no end:
+        </p>
+        <h3>The Path of Learning!</h3>
+        <p>Click 
+            <a id="outside-link" href="#">here</a> 
+            to start learning the 
+            answers (or perhaps the next level of questioning) 
+            to your questions.
+        </p>
+        <p>Or, replay the game to find another topic to 
+            learn about!
+        </p>
+        
+    </div>
 
     <!-- <script>
         function moveImage() {
